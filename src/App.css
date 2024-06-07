@@ -1,0 +1,21 @@
+.head{
+  display: flex;
+  justify-content: center;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 16px;
+  justify-content: center; 
+}
+
+.card-item {
+  flex: 1 1 300px; 
+  max-width: 345px; 
+}
+
+.child {
+  display: flex;
+  justify-content: space-between;
+}
