@@ -13,24 +13,6 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  // const [products, setProducts] = useState([]);
-  // const reduced = [];
-
-  //fetch data using jsonplaceholder
-  // const fetchPost = () => {
-  //   fetch("https://jsonplaceholder.typicode.com/photos")
-  //     .then((response) => response.json())
-  //     .then((data) =>
-  //       data.forEach((element) => {
-  //         if (reduced.length < 20) {
-  //           reduced.push(element);
-  //           setData(reduced);
-  //           // console.log(reduced);
-  //         }
-  //       })
-  //     );
-  // };
-
   const getProducts = () => {
     fetch("https://dummyjson.com/products") //fetch data from dummyjson
       .then((res) => res.json())
@@ -41,7 +23,6 @@ function App() {
   };
 
   useEffect(() => {
-    // fetchPost();
     getProducts();
   }, []);
 
@@ -118,34 +99,6 @@ function App() {
           </Card>
         ))}
       </div>
-
-      {/* <div className="card-container">
-        {filteredData.map((item) => (
-          <Card sx={{ maxWidth: 345 }} className="card-item" key={item.id}>
-            <CardActionArea className="child">
-              <CardMedia
-                component="img"
-                // height="140"
-                image={item.url}
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Lizard
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {item.title}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
-      </div> */}
     </div>
   );
 }
